@@ -1,0 +1,107 @@
+---
+title: "Process_1_Download_MTBS_data"
+author: "Jianning Ren"
+date: "8/31/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=F, message=F, results="hold", fig.width=14, fig.height=10)
+```
+
+## source the R code for downloading data
+## https://github.com/mbjoseph/mtbs-data
+
+
+
+```{r}
+
+install.packages('RNRCS')
+
+library(RNRCS)
+
+```
+
+
+```{r}
+grabNRCS.elements(site_id = "SCAN:1258")
+
+snotel1 = grabNRCS.data(site_id = 1258, timescale = "daily", network = "SNTL", DayBgn = '2014-07-01', DayEnd = '2019-12-01')
+
+```
+
+
+## gauge 977
+
+```{r}
+
+grabNRCS.elements(site_id = "SCAN:977")
+
+snotel2 = grabNRCS.data(site_id = 977, timescale = "daily", network = "SNTL", DayBgn = '1999-07-01', DayEnd = '2019-12-01')
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## below is for plot
+
+
+```{r}
+
+library(ggplot2)
+plot.theme3 <- theme(
+  
+  ## axis
+  axis.text  = element_text(color = 'black', size = 20,face="bold"), ## control the axis numbers
+  axis.title = element_text(size =20,face="bold"),
+  axis.ticks = element_line(color = 'black'),
+  axis.text.x = element_text(angle = 0, vjust = -0.5),
+  axis.line.x = element_line(color = "black"),
+  axis.line.y = element_line(color = "black"),
+  axis.title.x = element_text(vjust=-5),
+  axis.title.y = element_text(vjust= 4),
+  
+
+  ## legend
+  ## legend.margin=margin(t=1, r=0, b=-0.5, l=0, unit="cm") control xlab and legend spacing
+  legend.key.size = unit(1.5, "lines"),
+  legend.key.width = unit(1.5, "cm"),
+  legend.title = element_text(size = 20,face="bold"), # control the legend
+  legend.text = element_text(size = 20,face="bold"),
+  legend.spacing.x = unit(0.5, 'cm'),
+  legend.key= element_rect(colour = "transparent", fill = "transparent"),
+  legend.background = element_rect(fill = "transparent", colour = NA),
+  legend.box.background = element_rect(fill = "transparent", colour = NA), ## this the control??
+  
+  
+  # panel.background  = element_blank(),
+  # 
+  # panel.grid.major  = element_line(colour = "grey90", size = 0.5, linetype = 'dashed'),
+  #legend.background = element_rect(fill = NA),panel.border = element_blank(),
+  #panel.background  = element_blank(),
+
+  #panel.grid.minor.x = element_blank(),
+  #panel.grid.minor.y = element_blank(),
+  #panel.ontop = TRUE,
+  strip.text=element_text(size=20,face="bold"),
+ # plot.margin = unit(c(0.6,1,0.6,1), "cm"),  ## control the plot area margin 1 is bottom, left, top, right
+   
+   plot.margin = unit(c(1,1,1.1,1), "cm"),
+  
+  plot.title=element_text(size = 22,face="bold",hjust = 0.5) # plot title
+)
+
+```
