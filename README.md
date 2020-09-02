@@ -1,5 +1,5 @@
 # Waterhackweek 2020: Fire and Water
-### How do wildfires impact lake?
+### How do wildfires impact lakes?
 
 * Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
 
@@ -15,7 +15,7 @@
 
 ---
 
-### The Problem:
+### The problem:
 
 Wildfire regimes are shifting in western North America as global temperatures rise and combine with the effects of historial fire suppression and increased bark beetle infestations. The wildfire season is growing longer and more intense, with fire burning hotter and covering more land. The effects of local catastrophic wildfire on water quality and ecological changes in lakes, however, are poorly understood. In this project, we pursue the following questions using remote sensing data. 
 
@@ -24,7 +24,7 @@ Wildfire regimes are shifting in western North America as global temperatures ri
 
 With an initial focus on a single lake in northern California, our goal is to develop an analysis framework easily reporducible and applicable to other aquatic systems affected by fire.
 
-### The Case Study: Clear Lake Reservoir, CA
+### The case study: Clear Lake Reservoir, CA
 
 ![Tucker fire reaches Clear Lake in 2019](https://github.com/MeganEDuffy/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
@@ -38,19 +38,25 @@ Ave. depth at max. capacity: 6 m (20 ft)
 
 Water volume: 0.650 km3 (527,000 acre⋅ft)
 
-### Land and Water acknowledgement: 
+### Land and water acknowledgement: 
 
 The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc people, who have stewarded these lands and waters from time immemorial to today. Ignoring the proposals of the Modoc, Klamath, and Yahooskin Band of Snake tribes, the United States forcibly negotiated a Treaty of Council Grove in 1864 (ratified in 1870) that extinguished most tribal land rights and established a reservation north of traditional Modoc land. 
 
+---
 
-
-### Specific Questions/Goals:
+### Specific goals:
 * Learn to access and manipulate remote sensing data and time series meteorological data using python
 * Build a data aquisition and analysis framework applicable to other sites
 
 ---
 
-### Data:
+### Broader impacts:
+
+* Answering questions about lake surface temperature disturbances leads to implications for ecosystem impacts 
+* Potential for interpolation to lake systems too small for remote sensing surface temperature determinations
+
+
+### Data sources:
 
 * ECOSTRESS geotiff files and use to visualize spatial distribution surrounding fire event
 * MODIS time series 10 year recond from [Google Earth Engine](https://earthengine.google.com/)
@@ -65,10 +71,10 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 * [Google drive folder](https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc)
 * Hydroshare resource
 
-
 ---
 
-### Existing Methods/Tools and Prior Work:
+### Existing methods/tools and prior work:
+
 * [Grabbing SNOTEL data](https://github.com/renjianning/whw2020_firewater/tree/master/Scripts) (from Ning)
 * [Creating a hydroshare resource](https://www.hydroshare.org/resource/7015162a158648ba95ff547a6eb753ba/)
 
@@ -76,6 +82,7 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 ---
 
 ### Python Packages Used:
+
 * numpy
 * pandas
 * xarray
@@ -83,7 +90,8 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 ---
 
 ### Background Reading:
+
 * Monitoring Trends in Burn Severity (MTBS) - [MTBS Interactive Viewer](https://www.mtbs.gov/viewer/index.html)
-* UC Davis breif science brief - [Rim Fire impacts on Sierra Lakes](https://tahoe.ucdavis.edu/rim-fire)
+* UC Davis science brief - [Rim Fire impacts on Sierra Lakes](https://tahoe.ucdavis.edu/rim-fire)
 * Olesky, I.A, Beck, W.s., et al. "SThe role of warm, dry summers and variation in snowpack on phytoplankton dynamics in mountain lakes" Ecology (2020) https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.3132
 
