@@ -2,57 +2,76 @@
 ### How 
 
 Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
-Google Drive:https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc
+Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc
 
 ---
 
 ### Collaborators:
-* Bethel Steel (Project Lead)
-* Steven Pestana (spestana@uw.edu) (Data Science Lead)
+* Bethel Steele & Brent Wilder (Project Leads)
+* Steven Pestana (Data Science Lead)
+
+* Science team: Kim Vincent, Porranee Thanapakpawin, Ning Ren, Vitaliy Ye., Dani Hunt, Megan Duffy
 
 ---
 
 ### The Problem:
-* What are the patterns (spatial, temporal) of snowmelt in the Tuolumne River Basin?
-* Can we deliniate a snowmelt elevation band using in situ data from Dana Meadows, and an assumed air temperature lapse rate?
+* What is the impact on lake surface temperature after fire?
+* What are the timescales of impacts on water quality from fire?
+
+### The Case Study: Clear Lake Reservoir, CA
+
+* The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
+
+Clear Lake Reservoir has experienced large wildfire events in July, 2019 (Tucker Fire, 14,150 acres)
+
+Lake surface area: 104.247 km2 (25,760 acres)
+
+Ave. depth at max. capacity: 6 m (20 ft)
+
+Water volume: 0.650 km3 (527,000 acre⋅ft)
+
+![Tucker fire reaches Clear Lake in 2019](https://github.com/waterhackweek/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
 ### Specific Questions/Goals:
-* Learn how to read, plot, and manipulate ASO raster data, and time series meteorological data in python
+* Learn to access and manipulate remote sensing data and time series meteorological data in python
 
 ### Broader Impacts and Applicaitons: 
-* The winter snowpack of the Tuolumne River Basin (TRB) is a major water supply for human use in California
+* 
 
 ---
 
 ### Data:
-Lidar from the NASA Airborne Snow Observatory provides snapshots in time of snow depth across a watershed
-* Snow depth (geotiff raster at 30m resolution, ASO lidar-derived) 2014, 2015, 2016
-* DEM (geotiff raster at 30m resolution, ASO lidar-derived)
-* [Data readme](https://github.com/waterhackweek/whw2019_snowmelt/tree/master/data)
-* [Google drive folder](https://drive.google.com/drive/folders/1wDo9Xc2FYYhxTw9HUvVxhX7I8XEYYnv7?usp=sharing)
-* [Data access demo notebook](https://nbviewer.jupyter.org/github/waterhackweek/whw2019_snowmelt/blob/master/data/data-access-demo.ipynb)
 
-![ASO Slide](https://github.com/waterhackweek/whw2019_snowmelt/blob/master/aso.PNG)
+* ECOSTRESS geotiff files and use to visualize spatial distribution surrounding fire event
+* MODIS time series 10 year recond from [Google Earth Engine](https://earthengine.google.com/)
+* Snow Telemetry - [SNOTEL](https://www.nrcs.usda.gov/wps/portal/wcc/home/quicklinks/imap#version=125&elements=&networks=!&states=!&counties=!&hucs=&minElevation=&maxElevation=&elementSelectType=all&activeOnly=true&activeForecastPointsOnly=false&hucLabels=false&hucIdLabels=false&hucParameterLabels=true&stationLabels=&overlays=&hucOverlays=2&basinOpacity=75&basinNoDataOpacity=25&basemapOpacity=100&maskOpacity=0&mode=data&openSections=dataElement,parameter,date,basin,options,elements,location,networks&controlsOpen=true&popup=&popupMulti=&base=esriNgwm&displayType=station&basinType=6&dataElement=WTEQ&depth=-8&parameter=PCTMED&frequency=DAILY&duration=I&customDuration=&dayPart=E&year=2020&month=8&day=31&monthPart=E&forecastPubMonth=6&forecastPubDay=1&forecastExceedance=50&seqColor=1&divColor=7&scaleType=D&scaleMin=&scaleMax=&referencePeriodType=POR&referenceBegin=1981&referenceEnd=2010&minimumYears=20&hucAssociations=true&lat=42.1008&lon=-121.0913&zoom=10.0) 
+* [DayMet](https://daymet.ornl.gov/) gridded estimates of daily weather parameters
+* Possible: monthly evapotranspiration data from SSEBop model based on MODIS
+* Possible future integration of buoy data and/or low-resolution in situ profile temperature, chlorophyll-a, nutrients, sediment load, or geophysical properties
+
+* [Data readme](https://github.com/waterhackweek/whw2020_firewater/tree/master/data)
+* [Google drive folder](https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc)
+* Hydroshare resource
+
 
 ---
 
 ### Existing Methods/Tools and Prior Work:
-* https://github.com/NCristea/NCristeaGEE 
-* https://github.com/geohackweek/ghw2018_snowmelt
-* [Creating a hydroshare resource](https://www.hydroshare.org/resource/7015162a158648ba95ff547a6eb753ba/), and [in pysumma](https://gist.github.com/spestana/3038f9b9e9e34fc39ed13248ca894ef5)
-* environment file from [Geohackweek tutorial materials](https://geohackweek.github.io/raster/01-introduction/)
+* [Grabbing SNOTEL data](https://github.com/renjianning/whw2020_firewater/tree/master/Scripts) (from Ning)
+* [Creating a hydroshare resource](https://www.hydroshare.org/resource/7015162a158648ba95ff547a6eb753ba/)
+
 
 ---
 
 ### Python Packages Used:
 * numpy
 * pandas
-* rasterio
+* xarray
 
 ---
 
 ### Background Reading:
-* NASA JPL - [Airborne Snow Observatory](https://aso.jpl.nasa.gov/)
-* Musselman, Keith N., et al. "Slower snowmelt in a warmer world." Nature Climate Change 7.3 (2017): 214. doi: 10.1038/nclimate3225  https://www.nature.com/articles/nclimate3225.pdf 
-* Painter, T. H., Berisford, D. F., Boardman, J. W., Bormann, K. J., Deems, J. S., Gehrke, F., ... & Mattmann, C. (2016). The Airborne Snow Observatory: Fusion of scanning lidar, imaging spectrometer, and physically-based modeling for mapping snow water equivalent and snow albedo. Remote Sensing of Environment, 184, 139-152.
+* Monitoring Trends in Burn Severity (MTBS) - [MTBS Interactive Viewer](https://www.mtbs.gov/viewer/index.html)
+* UC Davis breif science brief - [Rim Fire impacts on Sierra Lakes](https://tahoe.ucdavis.edu/rim-fire)
+* Olesky, I.A, Beck, W.s., et al. "SThe role of warm, dry summers and variation in snowpack on phytoplankton dynamics in mountain lakes" Ecology (2020) https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.3132
 
