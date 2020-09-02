@@ -15,6 +15,9 @@ Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJIm
 ---
 
 ### The Problem:
+
+Wildfire regimes are shifting in western North America as global temperatures rise, combining with the effects of historial fire suppression and increased bark beetle infestations. The wildfire is growing longer and more intense, with fire burning hotter and covering more land. 
+
 * What is the impact on lake surface temperature after fire?
 * What are the timescales water quality shifts after a fire?
 
@@ -30,10 +33,15 @@ Ave. depth at max. capacity: 6 m (20 ft)
 
 Water volume: 0.650 km3 (527,000 acre⋅ft)
 
+#### Land and Water acknowledgement: 
+
+The Clear Lake basin is part of the current and ancestral homelands of the Modoc people. The Modoc 
+
 ![Tucker fire reaches Clear Lake in 2019](https://github.com/waterhackweek/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
 ### Specific Questions/Goals:
-* Learn to access and manipulate remote sensing data and time series meteorological data in python
+* Learn to access and manipulate remote sensing data and time series meteorological data using python
+* Build a data aquisition and analysis framework applicable to other sites
 
 ### Broader Impacts and Applicaitons: 
 * 
