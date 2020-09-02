@@ -1,5 +1,5 @@
 # Waterhackweek 2020: Fire and Water
-### How 
+### How do wildfires impact lake surface temperature?
 
 Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
 Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc
@@ -16,13 +16,13 @@ Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJIm
 
 ### The Problem:
 * What is the impact on lake surface temperature after fire?
-* What are the timescales of impacts on water quality from fire?
+* What are the timescales water quality shifts after a fire?
 
 ### The Case Study: Clear Lake Reservoir, CA
 
 * The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
 
-Clear Lake Reservoir has experienced large wildfire events in July, 2019 (Tucker Fire, 14,150 acres)
+Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres), which burned to the lake's rim.
 
 Lake surface area: 104.247 km2 (25,760 acres)
 
