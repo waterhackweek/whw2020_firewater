@@ -1,8 +1,9 @@
 # Waterhackweek 2020: Fire and Water
 ### How do wildfires impact lake surface temperature?
 
-Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
-Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc
+* Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
+
+* Google drive: https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc
 
 ---
 
@@ -23,7 +24,7 @@ Wildfire regimes are shifting in western North America as global temperatures ri
 
 ### The Case Study: Clear Lake Reservoir, CA
 
-* The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
+The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
 
 Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres), which burned to the lake's rim.
 
@@ -33,18 +34,19 @@ Ave. depth at max. capacity: 6 m (20 ft)
 
 Water volume: 0.650 km3 (527,000 acre⋅ft)
 
-#### Land and Water acknowledgement: 
+### Land and Water acknowledgement: 
 
-The Clear Lake basin is part of the current and ancestral homelands of the Modoc people. The Modoc 
+The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc people, who have stewarded these lands and waters from time immemorial to today. Ignoring the proposals of the Modoc, Klamath, and Yahooskin Band of Snake tribes, the United States forcibly negotiated a Treaty of Council Grove in 1864 (ratified in 1870) that extinguished most tribal land rights and established a reservation north of traditional Modoc land. 
 
-![Tucker fire reaches Clear Lake in 2019](https://github.com/waterhackweek/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
+
+![Tucker fire reaches Clear Lake in 2019](https://github.com/MeganEDuffy/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
 ### Specific Questions/Goals:
 * Learn to access and manipulate remote sensing data and time series meteorological data using python
 * Build a data aquisition and analysis framework applicable to other sites
 
 ### Broader Impacts and Applicaitons: 
-* 
+
 
 ---
 
@@ -56,6 +58,8 @@ The Clear Lake basin is part of the current and ancestral homelands of the Modoc
 * [DayMet](https://daymet.ornl.gov/) gridded estimates of daily weather parameters
 * Possible: monthly evapotranspiration data from SSEBop model based on MODIS
 * Possible future integration of buoy data and/or low-resolution in situ profile temperature, chlorophyll-a, nutrients, sediment load, or geophysical properties
+
+#### Project data repositories and resources
 
 * [Data readme](https://github.com/waterhackweek/whw2020_firewater/tree/master/data)
 * [Google drive folder](https://drive.google.com/drive/folders/1he4AevUwBnyOu1mv9Gttn7MJImSd7cvc)
