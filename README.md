@@ -96,3 +96,24 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 * UC Davis science brief - [Rim Fire impacts on Sierra Lakes](https://tahoe.ucdavis.edu/rim-fire)
 * Olesky, I.A, Beck, W.s., et al. "SThe role of warm, dry summers and variation in snowpack on phytoplankton dynamics in mountain lakes" Ecology (2020) https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.3132
 
+---
+
+### Getting started with the *firewaterenv* conda environment
+
+Create the environment:
+
+`conda env create -f environment.yml`
+
+Activate the environment:
+
+`conda activate firewaterenv`
+
+If using the Google Earth Engine API, authenticate your account to access it:
+
+`earthengine authenticate`
+
+Then:
+* Shift+RightClick > Copy the URL
+* Go to the URL and then log in to your GEE account when prompted
+* Copy the authentication token from the website
+* Paste the authentication token in the terminal then press Enter
