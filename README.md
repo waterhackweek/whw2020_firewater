@@ -17,10 +17,12 @@
 
 ### The Problem:
 
-Wildfire regimes are shifting in western North America as global temperatures rise and combine with the effects of historial fire suppression and increased bark beetle infestations. The wildfire is growing longer and more intense, with fire burning hotter and covering more land. 
+Wildfire regimes are shifting in western North America as global temperatures rise and combine with the effects of historial fire suppression and increased bark beetle infestations. The wildfire season is growing longer and more intense, with fire burning hotter and covering more land. The effects of local catastrophic wildfire on water quality and ecological changes in lakes, however, are poorly understood. In this project, we pursue the following questions using remote sensing data. 
 
 * What is the impact on lake surface temperature after fire?
 * What are the timescales water quality shifts after a fire?
+
+With an initial focus on a single lake in northern California, our goal is to develop an analysis framework easily reporducible and applicable to other aquatic systems affected by fire.
 
 ### The Case Study: Clear Lake Reservoir, CA
 
