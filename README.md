@@ -117,3 +117,8 @@ Then:
 * Go to the URL and then log in to your GEE account when prompted
 * Copy the authentication token from the website
 * Paste the authentication token in the terminal then press Enter
+
+
+[More information about working with conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
+
+[More information about the GEE API](https://developers.google.com/earth-engine/guides/python_install-conda)
