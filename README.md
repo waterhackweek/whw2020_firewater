@@ -55,6 +55,7 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 * Answering questions about lake surface temperature disturbances leads to implications for ecosystem impacts 
 * Potential for interpolation to lake systems too small for remote sensing surface temperature determinations
 
+---
 
 ### Data sources:
 
