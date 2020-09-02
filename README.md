@@ -1,5 +1,5 @@
 # Waterhackweek 2020: Fire and Water
-### How do wildfires impact lake surface temperature?
+### How do wildfires impact lake?
 
 * Slack channel: [#fire-and-water](https://waterhackweek2020.slack.com/messages/C019MP15H70) 
 
@@ -17,12 +17,14 @@
 
 ### The Problem:
 
-Wildfire regimes are shifting in western North America as global temperatures rise, combining with the effects of historial fire suppression and increased bark beetle infestations. The wildfire is growing longer and more intense, with fire burning hotter and covering more land. 
+Wildfire regimes are shifting in western North America as global temperatures rise and combine with the effects of historial fire suppression and increased bark beetle infestations. The wildfire is growing longer and more intense, with fire burning hotter and covering more land. 
 
 * What is the impact on lake surface temperature after fire?
 * What are the timescales water quality shifts after a fire?
 
 ### The Case Study: Clear Lake Reservoir, CA
+
+![Tucker fire reaches Clear Lake in 2019](https://github.com/MeganEDuffy/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
 The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
 
@@ -39,14 +41,10 @@ Water volume: 0.650 km3 (527,000 acre⋅ft)
 The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc people, who have stewarded these lands and waters from time immemorial to today. Ignoring the proposals of the Modoc, Klamath, and Yahooskin Band of Snake tribes, the United States forcibly negotiated a Treaty of Council Grove in 1864 (ratified in 1870) that extinguished most tribal land rights and established a reservation north of traditional Modoc land. 
 
 
-![Tucker fire reaches Clear Lake in 2019](https://github.com/MeganEDuffy/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 
 ### Specific Questions/Goals:
 * Learn to access and manipulate remote sensing data and time series meteorological data using python
 * Build a data aquisition and analysis framework applicable to other sites
-
-### Broader Impacts and Applicaitons: 
-
 
 ---
 
