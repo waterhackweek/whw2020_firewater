@@ -312,5 +312,16 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h516909a_1007
   - zstd=1.4.5=h6597ccf_2
+  - pip:
+    - geehydro==0.2.0
+    - geetools==0.6.0
+    - httplib2shim==0.0.3
+    - ipygee==0.0.14
+    - ipyleaflet==0.13.3
+    - ipywidgets==7.5.1
+    - proplot==0.6.4
+    - pygal==2.4.0
+    - traittypes==0.2.1
+    - widgetsnbextension==3.5.1
 prefix: /home/jovyan/data/conda-envs/firewaterenv
 
