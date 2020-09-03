@@ -1,3 +1,9 @@
+/*This script is meant to extract statistics from the MODIS LST product for the surface water temperature of Clear Lake Reservoir in CA. In order to run this, you need to import the shape file of the lake as an asset and then add the asset to the code editor. */
+
+//updated 03Sept2020
+//by B. Steele
+//v. 03Sept2020 - adds conversion of LST to degrees C (using both the scaling factor and the conversion from Kelvin), adds additional stats in the ee.Reducer step; still need to figure out how to eliminate mixels.
+
 // define satellite
 var sw = ee.Image("JRC/GSW1_1/GlobalSurfaceWater"),
     mLST = ee.ImageCollection("MODIS/006/MOD11A1")
