@@ -1,9 +1,10 @@
-/*This script is meant to extract statistics from the MODIS LST product for the surface water temperature of Clear Lake Reservoir in CA. In order to run this, you need to import the shape file of the lake as an asset and then add the asset to the code editor. */
+/*This script is meant to extract statistics from the MODIS LST daytime product for the surface water temperature of Clear Lake Reservoir in CA. In order to run this, you need to import the shape file of the lake as an asset and then add the asset to the code editor. */
 
 //updated 03Sept2020
 //by B. Steele
 //v. 03Sept2020 - adds conversion of LST to degrees C (using both the scaling factor and the conversion from Kelvin), adds additional stats in the ee.Reducer step; still need to figure out how to eliminate mixels.
-//v 03Sept2020b - corrects ee.Reducer to .unweighted(), meaning that only pixels with centroids within the clipped area are counted during aggregation!
+//v. 03Sept2020b - corrects ee.Reducer to .unweighted(), meaning that only pixels with centroids within the clipped area are counted during aggregation!
+//v. 03Sept2020c - adds buffer step
 
 // define satellite info
 var sw = ee.Image("JRC/GSW1_1/GlobalSurfaceWater"),
@@ -11,7 +12,15 @@ var sw = ee.Image("JRC/GSW1_1/GlobalSurfaceWater"),
               .filter(ee.Filter.date('2009-01-01', '2020-01-01'));
 
 var pctTime = 91.5; //what percent of the time does a pixel need to classify as water?
-//var y1 = 2009, y2 = 2019; //year range
+
+// shrink polygon by buffer
+var bufferBy = function(size) {
+  return function(feature) {
+    return feature.buffer(size);   
+  };
+};
+
+var clear_shrink = clear.map(bufferBy(-750));
 
 // Scale to Kelvin and convert to Celsius, set image acquisition time.
 var modLSTc = mLST.map(function(img) {
@@ -35,25 +44,23 @@ var landSurfaceTemperatureVis = {
   ],
 };
 
-//shrink geometry to water area
+
+//shrink buffered geometry to water area after
 var wateroccurrence = sw.select(0);
 var water = wateroccurrence.gte(pctTime);
 water = water.updateMask(water.neq(0));//.int8();
 var clear_water = water.addBands(wateroccurrence).reduceToVectors({
   reducer: ee.Reducer.min(),
-  geometry: clear,
+  geometry: clear_shrink,
   scale: 500, //
   labelProperty: 'surfaceWater'
 });
-
-/* need to shrink area further to make sure we aren't including pixels on land*/
 
 
 
 //calc stats
 var LotsOStats2 = function(img){
-  img = ee.Image(img)
-    .clip(clear_water);
+
 var geo = clear_water.geometry(); 
   
   var modistime = img.get('system:time_start');
@@ -61,7 +68,6 @@ var geo = clear_water.geometry();
   var getCount = img.reduceRegion({
     reducer: ee.Reducer.count(),
     geometry:geo,
-    //bestEffort:true,
     scale: 1000,
     maxPixels:1e9
   });
@@ -69,7 +75,6 @@ var geo = clear_water.geometry();
 var minLST = img.reduceRegion({
     reducer: ee.Reducer.min().unweighted(),
     geometry:geo,
-    //bestEffort:true,
     scale: 1000,
     maxPixels:1e9
   });
@@ -77,7 +82,6 @@ var minLST = img.reduceRegion({
 var maxLST = img.reduceRegion({
     reducer: ee.Reducer.max().unweighted(),
     geometry:geo,
-    //bestEffort:true,
     scale: 1000,
     maxPixels:1e9
   });
@@ -108,18 +112,15 @@ var temp_stats = landSurfaceTemperature.map(LotsOStats2);
 
 print(temp_stats);
 
-// make viz
-var filt_lst = temp_stats.select('LST_Day_1km_mean');
 
+// make viz
 Map.setCenter(-121.14, 41.857840, 12);
 
-print(landSurfaceTemperature);
-
-Map.addLayer(
-  clear_water
-  );
 Map.addLayer(
   clear
+  );
+Map.addLayer(
+  clear_shrink
   );
 Map.addLayer(
   landSurfaceTemperature.median().clip(clear_water),
@@ -130,7 +131,7 @@ Map.addLayer(
 
 Export.table.toDrive({
   collection: temp_stats,
-  description: "temp_stats_clear",
+  description: "temp_stats_dayLST_clear",
   fileFormat: "CSV",
   folder: "whw_clear_res"
 });
