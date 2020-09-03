@@ -31,13 +31,15 @@ With an initial focus on a single lake in northeastern California, our goal is t
 
 The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traverses about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
 
-Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres), which burned to the lake's rim.
+Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres) which burned to the lake's rim.
 
-    Lake surface area: 104.247 km2 (25,760 acres)
+- 41.860°N 121.146°W; elevation: 1367 m (4485 ft)
 
-    Ave. depth at max. capacity: 6 m (20 ft)
+- Lake surface area: 104.247 km2 (25,760 acres)
 
-    Water volume: 0.650 km3 (527,000 acre⋅ft)
+- Ave. depth at max. capacity: 6 m (20 ft)
+
+- Water volume: 0.650 km3 (527,000 acre⋅ft)
 
 ### Land and water acknowledgement: 
 
