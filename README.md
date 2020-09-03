@@ -33,13 +33,13 @@ The Upper Lost River/Clear Lake Reservoir watershed drains the north-central por
 
 Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres) which burned to the lake's rim.
 
-- 41.860°N 121.146°W; elevation: 1367 m (4485 ft)
+- 41.860 °N 121.146 °W; elevation: 1367 m (4485 ft)
 
-- Lake surface area: 104.247 km2 (25,760 acres)
+- Lake surface area: 104 7 km<sup>2</sup> (25760 acres)
 
 - Ave. depth at max. capacity: 6 m (20 ft)
 
-- Water volume: 0.650 km3 (527,000 acre⋅ft)
+- Water volume: 0.650 kkm<sup>3</sup> (527000 acre⋅ft)
 
 ### Land and water acknowledgement: 
 
