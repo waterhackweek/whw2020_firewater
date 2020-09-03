@@ -29,9 +29,9 @@ With an initial focus on a single lake in northeastern California, our goal is t
 ![Tucker fire reaches Clear Lake in 2019](https://github.com/MeganEDuffy/whw2020_firewater/blob/master/tucker-fire-clear.jpeg)
 *Tucker fire reaches the shores of Clear Lake Reservoir, July 2019, photo Brian Gailey- Klamath Falls News*
 
-The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River. The Lost River flows northwesterly into Oregon, where it traverses about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. The reservoir is in Modoc National Forest and Clear Lake National Wildlife Refuge.
+The Upper Lost River/Clear Lake Reservoir watershed drains the north-central portion of the Modoc Plateau to the Clear Lake Reservoir, which feeds the Lost River, a tributary of the Klamath River. After the dam at Clear Lake (constructed in 1910 and replaced in 2002) the Lost River flows northwest into Oregon, traversing about 100 miles before returning to California and ending in a closed drainage basin at Tule Lake, including reclaimed wetlands in the Tule Lake National Wildlife Refuge, a key staging area for migrating waterfowl in North America. Clear Lake Reservoir is part of Modoc National Forest and protected as Clear Lake National Wildlife Refuge. The reservoir's water supplies irrigation in the eastern portion of the Klamath Basin. 
 
-Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres) which burned to the lake's rim.
+Clear Lake Reservoir has experienced large wildfire events in the recent past, including the Tucker Fire in July 2019 (14,150 acres) which burned to the lake's rim. Additional information:
 
 - 41.860 °N 121.146 °W; elevation: 1367 m (4485 ft)
 
