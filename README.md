@@ -39,7 +39,7 @@ Clear Lake Reservoir has experienced large wildfire events in the recent past, i
 
 - Ave. depth at max. capacity: 6 m (20 ft)
 
-- Water volume: 0.650 kkm<sup>3</sup> (527000 acre⋅ft)
+- Water volume: 0.650 km<sup>3</sup> (527000 acre⋅ft)
 
 ### Land and water acknowledgement: 
 
@@ -90,7 +90,10 @@ The Clear Lake Reservoir is a small part of the ancestral homelands of the Modoc
 
 * numpy
 * pandas
-* xarray
+* [xarray](http://xarray.pydata.org/en/stable/)
+* [geehydro](https://github.com/giswqs/geehydro)
+* matplotlib
+* [folium](https://pypi.org/project/folium/)
 
 ---
 
