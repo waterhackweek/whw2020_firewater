@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, warning=F, message=F, results="hold", fig.wid
 
 ```{r}
 
-install.packages('RNRCS')
+# install.packages('RNRCS')
 
 library(RNRCS)
 
@@ -30,6 +30,45 @@ snotel1 = grabNRCS.data(site_id = 1258, timescale = "daily", network = "SNTL", D
 
 ```
 
+
+
+```{r}
+
+head(snotel1)
+
+snotel11 = snotel1 %>% 
+  select(Date, starts_with('Air.Tem'))
+
+head(snotel11)
+
+names(snotel11) =c("date","Tavg", "Tmax", "Tmin","Tsoil")
+
+snotel111<-snotel11 %>% 
+  mutate(Tmax_C=(Tmax-32)*5/9) %>%
+  mutate(Tmin_C=(Tmin-32)*5/9) %>%
+  mutate(Tave_C=(Tavg-32)*5/9) %>% 
+  mutate(date = as.Date(date))  
+
+head(snotel111)
+
+```
+
+```{r}
+plot.data2 = snotel111 %>% 
+  select(date, Tmax_C, Tmin_C) %>% 
+  filter(date >= as.Date("2019-07-01") & date<= as.Date("2019-09-01")) %>% 
+  reshape::melt(., id.vars="date") 
+ 
+
+
+ggplot(plot.data2) +
+  geom_line(aes(x =date, y=value, color=variable), lwd=1.2)+
+   xlab("Date") +
+  ylab("Temperature (degree C)")+
+  plot.theme3
+
+
+```
 
 ## gauge 977
 
@@ -104,6 +143,31 @@ snotel22 <- snotel22 %>%
 
 ```
 
+```{r}
+
+plot.data1 = snotel22 %>% 
+  select(date, Tmax_C, Tmin_C) %>% 
+  filter(date >= as.Date("2019-07-01") & date<= as.Date("2019-09-01")) %>% 
+  reshape::melt(., id.vars="date") 
+ 
+
+
+ggplot(plot.data1) +
+  geom_line(aes(x =date, y=value, color=variable), lwd=1.2)+
+   xlab("Date") +
+  ylab("Temperature (degree C)")+
+  plot.theme3
+
+plot.data22 = snotel22 %>% 
+  filter(date >= as.Date("2019-07-01") & date<= as.Date("2019-09-01")) 
+
+
+ggplot(plot.data22) +
+  geom_line(aes(x=date, y=precip_flux), lwd=1.2)+
+  plot.theme3+
+  xlab("Date") + ylab("Precipitation (mm)")
+
+```
 
 ## calculate the yearly
 
