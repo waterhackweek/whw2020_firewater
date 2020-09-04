@@ -5,11 +5,12 @@
 //v. 03Sept2020 - adds conversion of LST to degrees C (using both the scaling factor and the conversion from Kelvin), adds additional stats in the ee.Reducer step; still need to figure out how to eliminate mixels.
 //v. 03Sept2020b - corrects ee.Reducer to .unweighted(), meaning that only pixels with centroids within the clipped area are counted during aggregation!
 //v. 03Sept2020c - adds buffer step
+//v. 03Sept2020d - corrects stats function for min and max
 
 // define satellite info
 var sw = ee.Image("JRC/GSW1_1/GlobalSurfaceWater"),
     mLST = ee.ImageCollection("MODIS/006/MOD11A1")
-              .filter(ee.Filter.date('2009-01-01', '2020-01-01'));
+              .filter(ee.Filter.date('2008-01-01', '2020-01-01'));
 
 var pctTime = 91.5; //what percent of the time does a pixel need to classify as water?
 
@@ -61,7 +62,7 @@ var clear_water = water.addBands(wateroccurrence).reduceToVectors({
 //calc stats
 var LotsOStats2 = function(img){
 
-var geo = clear_water.geometry(); 
+  var geo = clear_water.geometry(); 
   
   var modistime = img.get('system:time_start');
 
@@ -71,22 +72,8 @@ var geo = clear_water.geometry();
     scale: 1000,
     maxPixels:1e9
   });
-  
-var minLST = img.reduceRegion({
-    reducer: ee.Reducer.min().unweighted(),
-    geometry:geo,
-    scale: 1000,
-    maxPixels:1e9
-  });
-  
-var maxLST = img.reduceRegion({
-    reducer: ee.Reducer.max().unweighted(),
-    geometry:geo,
-    scale: 1000,
-    maxPixels:1e9
-  });
 
-var count = ee.Dictionary(getCount).get('LST_Day_1km');
+  var count = ee.Dictionary(getCount).get('LST_Day_1km');
 
   var stats = img.reduceRegion({
     reducer: ee.Reducer.median().unweighted().combine({
@@ -99,11 +86,19 @@ var count = ee.Dictionary(getCount).get('LST_Day_1km');
     maxPixels:1e9
   });
 
+  var stats2 = img.reduceRegion({
+    reducer: ee.Reducer.min().unweighted().combine({
+      reducer2: ee.Reducer.max().unweighted(),
+      sharedInputs:true
+    }),
+    geometry: geo,
+    scale: 1000,
+    maxPixels:1e9
+  });
   
+  stats = stats.combine(stats2);
   stats = ee.Dictionary(stats).set('pixel_count',count);
   stats = ee.Dictionary(stats).set('modis_time',modistime);
-  stats = ee.Dictionary(stats).set('minLST', minLST);
-  stats = ee.Dictionary(stats).set('maxLST', maxLST);
 
   return ee.Feature(null,stats);
 };
@@ -131,7 +126,7 @@ Map.addLayer(
 
 Export.table.toDrive({
   collection: temp_stats,
-  description: "temp_stats_dayLST_clear",
+  description: "temp_stats_dayLST_clear_v2",
   fileFormat: "CSV",
   folder: "whw_clear_res"
 });
